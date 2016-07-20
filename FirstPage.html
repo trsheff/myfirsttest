@@ -10,12 +10,38 @@
 <body>
 <div id="wrapper">
     <header>
-        <div class="mobile-menu">
-            <div class="middle">
-                <span></span>
-            </div>
-        </div>
+        <!--<div class="mobile-menu">-->
+
+            <!--<div class="middle">-->
+                <!--<input type="checkbox" id="hmt" class="hidden-menu-ticker">-->
+                <!--<label class="btn-menu" for="hmt">-->
+                    <!--<span></span>-->
+                <!--</label>-->
+                <!--<ul class="hidden-menu">-->
+                    <!--<li><a href="#">Home</a> </li>-->
+                    <!--<li><a href="#">About</a> </li>-->
+                    <!--<li><a href="#">Products</a> </li>-->
+                    <!--<li><a href="#">Blog</a> </li>-->
+                <!--</ul>-->
+            <!--</div>-->
+
+        <!--</div>-->
         <div class="logoTEmp"><a class="logo" href="#">Officetime</a></div>
+
+        <div class="left-menu">
+        <input type="checkbox" id="hmt" class="hidden-menu-ticker">
+        <label class="btn-menu" for="hmt">
+        <span class="first"></span>
+        <span class="second"></span>
+        <span class="third"></span>
+        </label>
+        <ul class="hidden-menu">
+        <li><a href="">Link 1</a></li>
+        <li><a href="">Link 2</a></li>
+        <li><a href="">Link 3</a></li>
+        </ul>
+        </div>
+
         <ul class="top-menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -50,7 +76,8 @@
     <section class="three-photo">
         <!--<span>Как сюда правильно втулить</span>-->
         <div class="sometable-2-1">
-            <div class="ramka"><div class="img panda"></div>
+            <div class="ramka">
+                <div class="img panda"></div>
                 <!--<img src="panda.jpeg" alt="Panda">-->
                 <p>Lorem ipsum malesuada: urna sagittis sem ut curabitur, ornare</p></div>
             <p>Lorem ipsum eu at ipsum bibendum proin massa, porta morbi amet odio sagittis nec amet, at maecenas mauris
@@ -58,7 +85,8 @@
                 ornare tellus congue.</p>
         </div>
         <div class="sometable-2-2">
-            <div class="ramka"><div class="img lemon"></div>
+            <div class="ramka">
+                <div class="img lemon"></div>
                 <!--<img src="lemon.jpg" alt="Lemon">-->
                 <p>Lorem ipsum malesuada: urna sagittis sem ut curabitur, ornare</p></div>
             <p>Lorem ipsum eu at ipsum bibendum proin massa, porta morbi amet odio sagittis nec amet, at maecenas mauris
@@ -66,7 +94,8 @@
                 ornare tellus congue.</p>
         </div>
         <div class="sometable-2-3">
-            <div class="ramka"><div class="img cat"></div>
+            <div class="ramka">
+                <div class="img cat"></div>
                 <!--<img src="cat.jpg" alt="Cat">-->
                 <p>Lorem ipsum malesuada: urna sagittis sem ut curabitur, ornare</p></div>
             <p>Lorem ipsum eu at ipsum bibendum proin massa, porta morbi amet odio sagittis nec amet, at maecenas mauris
@@ -81,9 +110,9 @@
             <div class="menu-tab" data-tab="tab-3">Menu-Tab3</div>
         </div>
         <div class="content-test">
-            <div  class="content-tab tab-1 active">Content-Tab1</div>
-            <div  class="content-tab tab-2">Content-Tab2</div>
-            <div  class="content-tab tab-3">Content-Tab3</div>
+            <div class="content-tab tab-1 active">Content-Tab1</div>
+            <div class="content-tab tab-2">Content-Tab2</div>
+            <div class="content-tab tab-3">Content-Tab3</div>
         </div>
     </section>
     <section>
@@ -93,61 +122,58 @@
             <div class="menu-tab" data-tab="tab-3">Menu-Tab3</div>
         </div>
         <div class="content-test">
-            <div  class="content-tab tab-1 active">Content-Tab1</div>
-            <div  class="content-tab tab-2">Content-Tab2</div>
-            <div  class="content-tab tab-3">Content-Tab3</div>
+            <div class="content-tab tab-1 active">Content-Tab1</div>
+            <div class="content-tab tab-2">Content-Tab2</div>
+            <div class="content-tab tab-3">Content-Tab3</div>
         </div>
     </section>
     <!--<section>-->
-        <!--<div class="tabs-title-wrap">-->
-            <!--<div class="title active">name 1</div>-->
-            <!--<div class="title">name 2</div>-->
-            <!--<div class="title">name 3</div>-->
-        <!--</div>-->
-        <!--<div class="tabs-content-wrap">-->
-            <!--<div class="content active">content 1</div>-->
-            <!--<div class="content">content 2</div>-->
-            <!--<div class="content">content 3</div>-->
-        <!--</div>-->
+    <!--<div class="tabs-title-wrap">-->
+    <!--<div class="title active">name 1</div>-->
+    <!--<div class="title">name 2</div>-->
+    <!--<div class="title">name 3</div>-->
+    <!--</div>-->
+    <!--<div class="tabs-content-wrap">-->
+    <!--<div class="content active">content 1</div>-->
+    <!--<div class="content">content 2</div>-->
+    <!--<div class="content">content 3</div>-->
+    <!--</div>-->
     <!--</section>-->
     <footer></footer>
 </div>
 <script src="ChangeColor.js"></script>
 <script>
-        function old() {
-            $(".tab-test .menu-tab").click(function () {
-                var tabId = $(this).attr('data-tab');
-                $(".tab-test .menu-tab").removeClass("active"); //удаляем класс во всех вкладках
-                $(".content-test .content-tab").removeClass("active");
-                $(this).addClass("active"); //добавляем класс текущей (нажатой)
-                $("."+tabId).addClass('active');
-            });
-        }
-
+    function old() {
         $(".tab-test .menu-tab").click(function () {
-            $(this).siblings().removeClass("active"); //удаляем класс во всех вкладках
+            var tabId = $(this).attr('data-tab');
+            $(".tab-test .menu-tab").removeClass("active"); //удаляем класс во всех вкладках
+            $(".content-test .content-tab").removeClass("active");
             $(this).addClass("active"); //добавляем класс текущей (нажатой)
-
-            $(this).parent().parent()
-                    .find(".content-test .content-tab")
-                    .removeClass("active");
-
-            $(this).parent().parent()
-                    .find(".content-test .content-tab."+$(this).data('tab'))
-                    .addClass('active');
-
-
-
-            
+            $("." + tabId).addClass('active');
         });
+    }
+
+    $(".tab-test .menu-tab").click(function () {
+        $(this).siblings().removeClass("active"); //удаляем класс во всех вкладках
+        $(this).addClass("active"); //добавляем класс текущей (нажатой)
+
+        $(this).parent().parent()
+                .find(".content-test .content-tab")
+                .removeClass("active");
+
+        $(this).parent().parent()
+                .find(".content-test .content-tab." + $(this).data('tab'))
+                .addClass('active');
+
+    });
 </script>
 <!--<script>-->
-    <!--function test(date) {-->
-        <!--return /(0[0-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}/.test(date);-->
-    <!--}-->
-    <!--console.log(test('00.10.4444'));-->
-    <!--console.log(test('00-10-4444'));-->
-    <!--console.log(test('1222-10-31'));-->
+<!--function test(date) {-->
+<!--return /(0[0-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}/.test(date);-->
+<!--}-->
+<!--console.log(test('00.10.4444'));-->
+<!--console.log(test('00-10-4444'));-->
+<!--console.log(test('1222-10-31'));-->
 
 <!--</script>-->
 <!--<script>-->

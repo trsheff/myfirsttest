@@ -30,12 +30,13 @@ header {
 .mobile-menu .middle {
     display: table-cell;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .mobile-menu span {
     width: 30px;
     content: '';
-    height: 2px;
+    height: 4px;
     display: block;
     position: relative;
     background: #000;
@@ -45,7 +46,7 @@ header {
 .mobile-menu span:after {
     width: 30px;
     content: '';
-    height: 2px;
+    height: 4px;
     display: block;
     position: absolute;
     background: #000;
@@ -58,6 +59,123 @@ header {
 .mobile-menu span:after {
     bottom: -10px;
 }
+
+/*--------------------------------19-07-2016 ----------------------------------*/
+.left-menu {
+    display: none;
+}
+
+.hidden-menu {
+    display: block;
+    position: fixed;
+    list-style: none;
+    padding: 10px;
+    margin: 0px;
+    box-sizing: border-box;
+    width: 200px;
+    background-color: #eee;
+    height: 100%;
+    top: 0px;
+    left: -200px;
+    transition: left .2s;
+    z-index: 2;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+.hidden-menu-ticker {
+    display: none;
+}
+
+.btn-menu {
+    color: #fff;
+    /*background-color: #666;*/
+    padding: 5px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    transition: left .23s;
+    z-index: 3;
+    width: 25px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+.btn-menu span {
+    display: block;
+    height: 5px;
+    background-color: #002eff;
+    margin: 5px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+}
+
+.btn-menu span.first {
+    margin-top: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu {
+    left: 160px;
+}
+
+.hidden-menu-ticker:checked ~ .hidden-menu {
+    left: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+    -webkit-transform: rotate(45deg);
+    top: 10px;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+    opacity: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+    -webkit-transform: rotate(-45deg);
+    top: -10px;
+}
+
+/*end ------19-07-2016 */
+
+/*--------------------------------20-07-2016 ----------------------------------*/
+/*.hidden-menu-ticker {*/
+    /*!*display: none;*!*/
+/*}*/
+
+/*.hidden-menu {*/
+    /*display: block;*/
+    /*position: fixed;*/
+    /*list-style: none;*/
+    /*padding: 15px;*/
+    /*margin: 0;*/
+    /*box-sizing: border-box;*/
+    /*width: 200px;*/
+    /*background-color: #eee;*/
+    /*height: 100%;*/
+    /*top: 10px;*/
+    /*left: -200px;*/
+    /*transition: left 1s;*/
+    /*z-index: 3;*/
+    /*width: 25px;*/
+    /*-webkit-transform: translateZ(0);*/
+    /*-webkit-backface-visibility: hidden;*/
+/*}*/
+
+/*.hidden-menu-ticker:checked ~ .btn-menu {*/
+    /*left: 160px;*/
+/*}*/
+
+/*.hidden-menu-ticker:checked ~ .hidden-menu {*/
+    /*left: 0;*/
+/*}*/
+
+/*.hidden-menu-ticker:checked ~ .btn-menu span{*/
+    /*opacity: 0;*/
+/*}*/
+
+/*end ------20-07-2016 */
 
 .logoTEmp {
     display: table;
@@ -319,7 +437,7 @@ section {
 }
 
 /*==================================================*/
-.content-test{
+.content-test {
     border: 1px solid black;
     border-top: none;
 }
@@ -426,9 +544,18 @@ section {
 /*end ------7-07-2016 */
 
 /*--------------------------------14-07-2016 ----------------------------------*/
-@media screen and (max-width:840px)  {
+@media screen and (max-width: 840px) {
     /*.tab-test, .content-test{*/
-        /*display: none;*/
+    /*display: none;*/
     /*}*/
 }
+
+/*end ------14-07-2016 */
+/*--------------------------------14-07-2016 ----------------------------------*/
+@media screen and (max-width: 550px) {
+    .left-menu {
+        display: block;
+    }
+}
+
 /*end ------14-07-2016 */
